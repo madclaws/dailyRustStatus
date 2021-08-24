@@ -5,3 +5,4 @@ Writing Rust daily for building reliable and efficient software.
 ## Contents
 
 - [Prime Factors](https://github.com/madclaws/dailyRustStatus/tree/master/prime-factors)
+- [Grains](https://github.com/madclaws/dailyRustStatus/tree/master/grains)
