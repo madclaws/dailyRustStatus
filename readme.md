@@ -9,3 +9,5 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 2. [Assembly Line](https://github.com/madclaws/dailyRustStatus/tree/master/assembly-line)
 
 3. [Semi Structure Logs](https://github.com/madclaws/dailyRustStatus/tree/master/semi-structured-logs)
+
+4. [Short Fibonacci](https://github.com/madclaws/dailyRustStatus/tree/master/short-fibonacci)

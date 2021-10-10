@@ -20,9 +20,7 @@ pub fn log(level: LogLevel, message: &str) -> String {
     }
 }
 pub fn info(message: &str) -> String {
-    let mut label = "[INFO]: ".to_owned();
-    label.push_str(message);
-    label
+    format!("[INFO]: {}", message)
 }
 pub fn warn(message: &str) -> String {
     let mut label = "[WARNING]: ".to_owned();
