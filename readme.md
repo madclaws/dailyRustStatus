@@ -13,3 +13,5 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 4. [Short Fibonacci](https://github.com/madclaws/dailyRustStatus/tree/master/short-fibonacci)
 
 5. [Reverse String](https://github.com/madclaws/dailyRustStatus/tree/master/reverse-string)
+
+6. [GigaSecond](https://github.com/madclaws/dailyRustStatus/tree/master/gigasecond)
