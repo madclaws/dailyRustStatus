@@ -15,3 +15,5 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 5. [Reverse String](https://github.com/madclaws/dailyRustStatus/tree/master/reverse-string)
 
 6. [GigaSecond](https://github.com/madclaws/dailyRustStatus/tree/master/gigasecond)
+
+7. [Beer Song](https://github.com/madclaws/dailyRustStatus/tree/master/beer-song)
