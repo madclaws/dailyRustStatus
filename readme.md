@@ -17,3 +17,5 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 6. [GigaSecond](https://github.com/madclaws/dailyRustStatus/tree/master/gigasecond)
 
 7. [Beer Song](https://github.com/madclaws/dailyRustStatus/tree/master/beer-song)
+
+8. [Difference of squares](https://github.com/madclaws/dailyRustStatus/tree/master/difference-of-squares)
