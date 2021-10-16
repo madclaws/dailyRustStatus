@@ -19,3 +19,5 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 7. [Beer Song](https://github.com/madclaws/dailyRustStatus/tree/master/beer-song)
 
 8. [Difference of squares](https://github.com/madclaws/dailyRustStatus/tree/master/difference-of-squares)
+
+9. [Space Age](https://github.com/madclaws/dailyRustStatus/tree/master/space-age)
