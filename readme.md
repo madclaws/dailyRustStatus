@@ -21,3 +21,6 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 8. [Difference of squares](https://github.com/madclaws/dailyRustStatus/tree/master/difference-of-squares)
 
 9. [Space Age](https://github.com/madclaws/dailyRustStatus/tree/master/space-age)
+
+10. [Proverb](https://github.com/madclaws/dailyRustStatus/tree/master/proverb)
+
