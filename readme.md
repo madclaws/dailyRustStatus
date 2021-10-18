@@ -24,3 +24,5 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 
 10. [Proverb](https://github.com/madclaws/dailyRustStatus/tree/master/proverb)
 
+11. [Raindrops](https://github.com/madclaws/dailyRustStatus/tree/master/raindrops)
+
