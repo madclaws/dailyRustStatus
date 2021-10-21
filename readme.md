@@ -30,3 +30,6 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 
 13. [Sum of multiples](https://github.com/madclaws/dailyRustStatus/tree/master/sum-of-multiples)
 
+14. [Leap](https://github.com/madclaws/dailyRustStatus/tree/master/leap)
+
+
