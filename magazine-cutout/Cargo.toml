@@ -1,0 +1,5 @@
+cargo-features = ["edition2021"]
+[package]
+name = "magazine_cutout"
+version = "0.1.0"
+edition = "2021"

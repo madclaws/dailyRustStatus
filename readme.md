@@ -22,3 +22,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 16. [Nth Prime](https://github.com/madclaws/dailyRustStatus/tree/master/nth-prime)
 17. [Low power embedded game](https://github.com/madclaws/dailyRustStatus/tree/master/low-power-embedded-game)
 18. [Role Playing Game](https://github.com/madclaws/dailyRustStatus/tree/master/role-playing-game)
+19. [Magazine count](https://github.com/madclaws/dailyRustStatus/tree/master/magazine-cutout)
