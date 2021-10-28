@@ -25,3 +25,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 19. [Magazine count](https://github.com/madclaws/dailyRustStatus/tree/master/magazine-cutout)
 20. [High Scores](https://github.com/madclaws/dailyRustStatus/tree/master/high-scores)
 21. [RPN Calculator](https://github.com/madclaws/dailyRustStatus/tree/master/rpn-calculator)
+22. [Bob](https://github.com/madclaws/dailyRustStatus/tree/master/bob)
