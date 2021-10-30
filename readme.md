@@ -27,3 +27,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 21. [RPN Calculator](https://github.com/madclaws/dailyRustStatus/tree/master/rpn-calculator)
 22. [Bob](https://github.com/madclaws/dailyRustStatus/tree/master/bob)
 23. [Matching Brackets](https://github.com/madclaws/dailyRustStatus/tree/master/matching-brackets)
+24. [Matching Brackets](https://github.com/madclaws/dailyRustStatus/tree/master/acronym)
