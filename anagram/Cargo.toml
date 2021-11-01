@@ -1,0 +1,5 @@
+cargo-features = ["edition2021"]
+[package]
+edition = "2021"
+name = "anagram"
+version = "0.0.0"
