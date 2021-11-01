@@ -28,3 +28,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 22. [Bob](https://github.com/madclaws/dailyRustStatus/tree/master/bob)
 23. [Matching Brackets](https://github.com/madclaws/dailyRustStatus/tree/master/matching-brackets)
 24. [Acronym](https://github.com/madclaws/dailyRustStatus/tree/master/acronym)
+25. [Isogram](https://github.com/madclaws/dailyRustStatus/tree/master/isogram)
