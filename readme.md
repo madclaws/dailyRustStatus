@@ -30,4 +30,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 24. [Acronym](https://github.com/madclaws/dailyRustStatus/tree/master/acronym)
 25. [Isogram](https://github.com/madclaws/dailyRustStatus/tree/master/isogram)
 26. [Anagram](https://github.com/madclaws/dailyRustStatus/tree/master/anagram)
-
+27. [Hamming Distance](https://github.com/madclaws/dailyRustStatus/tree/master/hamming)
