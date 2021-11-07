@@ -34,3 +34,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 28. [Nucleotide count](https://github.com/madclaws/dailyRustStatus/tree/master/nucleotide-count)
 29. [Pangram](https://github.com/madclaws/dailyRustStatus/tree/master/pangram)
 30. [Rna transcription](https://github.com/madclaws/dailyRustStatus/tree/master/rna-transcription)
+31. [Pangram](https://github.com/madclaws/dailyRustStatus/tree/master/run-length-encoding)
