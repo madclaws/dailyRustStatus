@@ -37,3 +37,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 31. [Run length Encoding](https://github.com/madclaws/dailyRustStatus/tree/master/run-length-encoding)
 32. [Minesweeper](https://github.com/madclaws/dailyRustStatus/tree/master/minesweeper)
 33. [Pig Latin](https://github.com/madclaws/dailyRustStatus/tree/master/pig-latin)
+34. [Macros](https://github.com/madclaws/dailyRustStatus/tree/master/macros)
