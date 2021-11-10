@@ -38,3 +38,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 32. [Minesweeper](https://github.com/madclaws/dailyRustStatus/tree/master/minesweeper)
 33. [Pig Latin](https://github.com/madclaws/dailyRustStatus/tree/master/pig-latin)
 34. [Macros](https://github.com/madclaws/dailyRustStatus/tree/master/macros)
+35. [Sublist](https://github.com/madclaws/dailyRustStatus/tree/master/sublist)
