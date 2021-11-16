@@ -43,4 +43,6 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 37. [Diffie Hellman](https://github.com/madclaws/dailyRustStatus/tree/master/diffie_hellman)
 38. [Series](https://github.com/madclaws/dailyRustStatus/tree/master/series)
 39. [Protein Translation](https://github.com/madclaws/dailyRustStatus/tree/master/protein-translation)
+40. [Word Count](https://github.com/madclaws/dailyRustStatus/tree/master/word-count)
+
 

@@ -1,0 +1,6 @@
+cargo-features = ["edition2021"]
+
+[package]
+edition = "2021"
+name = "word-count"
+version = "1.2.0"
