@@ -46,3 +46,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 40. [Word Count](https://github.com/madclaws/dailyRustStatus/tree/master/word-count)
 41. [All your base](https://github.com/madclaws/dailyRustStatus/tree/master/all-your-base)
 42. [Allergies](https://github.com/madclaws/dailyRustStatus/tree/master/allergies)
+43. [ETL](https://github.com/madclaws/dailyRustStatus/tree/master/etl)

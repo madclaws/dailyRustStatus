@@ -29,22 +29,37 @@ impl Allergies {
 
     pub fn is_allergic_to(&self, allergen: &Allergen) -> bool {
         let allergy_list = self.allergies();
-        allergy_list.into_iter().any(|x| x == allergen)
+        allergy_list.into_iter().any(|x| x == *allergen)
     }
 
-    pub fn allergies(&self) -> Vec<&Allergen> {
-        let mut allergy_list: Vec<&Allergen> = Vec::new();
+    pub fn allergies(&self) -> Vec<Allergen> {
+        let mut allergy_list: Vec<Allergen> = Vec::new();
         let mut allergy_score = self.score;
         while allergy_score != 0 {
             let log = f64::log2(allergy_score as f64).floor() as u32;
-            match self.allergy_map.get(&log) {
+
+            match get_allergen(log) {
                 Some(allergy) => {
                     allergy_score -= u32::pow(2, log) ;
-                    allergy_list.push(allergy.to_owned())
+                    allergy_list.push(allergy)
                 },
                 None => allergy_score -= u32::pow(2, log)
             }
         }
         allergy_list
+    } 
+}
+
+pub fn get_allergen(log: u32) -> Option<Allergen> {
+    match log {
+        0 => Some(Allergen::Eggs),
+        1 => Some(Allergen::Peanuts),
+        2 => Some(Allergen::Shellfish),
+        3 => Some(Allergen::Strawberries),
+        4 => Some(Allergen::Tomatoes),
+        5 => Some(Allergen::Chocolate),
+        6 => Some(Allergen::Pollen),
+        7 => Some(Allergen::Cats),
+        _ => None
     }
 }
