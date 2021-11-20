@@ -47,3 +47,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 41. [All your base](https://github.com/madclaws/dailyRustStatus/tree/master/all-your-base)
 42. [Allergies](https://github.com/madclaws/dailyRustStatus/tree/master/allergies)
 43. [ETL](https://github.com/madclaws/dailyRustStatus/tree/master/etl)
+44. [Rotational Cipher](https://github.com/madclaws/dailyRustStatus/tree/master/rotational-cipher)
