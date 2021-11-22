@@ -49,4 +49,6 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 43. [ETL](https://github.com/madclaws/dailyRustStatus/tree/master/etl)
 44. [Rotational Cipher](https://github.com/madclaws/dailyRustStatus/tree/master/rotational-cipher)
 45. [Maze Runner - Part1: Implementing basic Grid and Cell modules](https://github.com/madclaws/dailyRustStatus/tree/master/maze_runner)
+46. [Triangle](https://github.com/madclaws/dailyRustStatus/tree/master/triangle)
+
 
