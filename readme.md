@@ -51,5 +51,7 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 45. [Maze Runner - Part1: Implementing basic Grid and Cell modules](https://github.com/madclaws/dailyRustStatus/tree/master/maze_runner)
 46. [Triangle](https://github.com/madclaws/dailyRustStatus/tree/master/triangle)
 47. [Triangle Generics](https://github.com/madclaws/dailyRustStatus/tree/master/triangle-generics)
+48. [Robot Name](https://github.com/madclaws/dailyRustStatus/tree/master/robot-name)
+
 
 
