@@ -52,6 +52,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 46. [Triangle](https://github.com/madclaws/dailyRustStatus/tree/master/triangle)
 47. [Triangle Generics](https://github.com/madclaws/dailyRustStatus/tree/master/triangle-generics)
 48. [Robot Name](https://github.com/madclaws/dailyRustStatus/tree/master/robot-name)
-
-
-
+49. [Custom Iterator](https://github.com/madclaws/dailyRustStatus/tree/master/custom_iterator)
