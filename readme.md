@@ -54,3 +54,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 48. [Robot Name](https://github.com/madclaws/dailyRustStatus/tree/master/robot-name)
 49. [Custom Iterator](https://github.com/madclaws/dailyRustStatus/tree/master/custom_iterator)
 50. [Accumulate](https://github.com/madclaws/dailyRustStatus/tree/master/accumulate)
+51. [Affine Cipher (Encode)](https://github.com/madclaws/dailyRustStatus/tree/master/affine-cipher)

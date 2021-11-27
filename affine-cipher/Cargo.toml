@@ -1,0 +1,9 @@
+cargo-features = ["edition2021"]
+
+[package]
+edition = "2021"
+name = "affine-cipher"
+version = "2.0.0"
+
+[dependencies]
+gcd = "2.0.2"
