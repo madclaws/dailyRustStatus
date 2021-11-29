@@ -1,4 +1,4 @@
 use rotational_cipher::*;
 fn main() {
-    rotate("omg", -26);
+    rotate("b", 1);
 }
