@@ -57,3 +57,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 51. [Affine Cipher (Encode)](https://github.com/madclaws/dailyRustStatus/tree/master/affine-cipher)
 52. [Affine Cipher (Decode)](https://github.com/madclaws/dailyRustStatus/tree/master/affine-cipher)
 53. [Atbash Cipher](https://github.com/madclaws/dailyRustStatus/tree/master/atbash-cipher)
+54. [Tournament](https://github.com/madclaws/dailyRustStatus/tree/master/tournament)

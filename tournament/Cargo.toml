@@ -1,0 +1,6 @@
+cargo-features = ["edition2021"]
+
+[package]
+edition = "2021"
+name = "tournament"
+version = "1.4.0"
