@@ -16,8 +16,8 @@ pub struct Robot{
 }
 
 impl Robot {
-    pub fn new(x: i32, y: i32, d: Direction) -> &'static Self {
-        &Robot{x, y, d}
+    pub fn new(x: i32, y: i32, d: Direction) -> Self {
+        Robot{x, y, d}
     }
 
     pub fn turn_right(&mut self) -> &mut Self {

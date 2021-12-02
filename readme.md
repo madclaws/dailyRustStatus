@@ -59,3 +59,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 53. [Atbash Cipher](https://github.com/madclaws/dailyRustStatus/tree/master/atbash-cipher)
 54. [Tournament](https://github.com/madclaws/dailyRustStatus/tree/master/tournament)
 55. [Sonar Sweep - AOC: 1](https://github.com/madclaws/dailyRustStatus/tree/master/aoc_2021/src/day_1.rs)
+56. [Robot Simulator](https://github.com/madclaws/dailyRustStatus/tree/master/aoc_2021/src/robot-simulator)
