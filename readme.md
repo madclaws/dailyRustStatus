@@ -63,3 +63,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 57. [Dive - AOC: 2](https://github.com/madclaws/dailyRustStatus/tree/master/aoc_2021/src/day_2.rs)
 58. [Resistor Color](https://github.com/madclaws/dailyRustStatus/tree/master/resistor-color)
 59. [Binary Diagnostic - AOC: 3_1](https://github.com/madclaws/dailyRustStatus/tree/master/aoc_2021/src/day_3.rs)
+60. [Binary Diagnostic - AOC: 3_2](https://github.com/madclaws/dailyRustStatus/tree/master/aoc_2021/src/day_3.rs)
