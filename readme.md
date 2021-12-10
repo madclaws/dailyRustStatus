@@ -67,4 +67,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 61. [The Giant Squid - AOC: 4](https://github.com/madclaws/dailyRustStatus/tree/master/aoc_2021/src/day_4.rs)
 62. [Sieve](https://github.com/madclaws/dailyRustStatus/tree/master/sieve)
 63. [Queen Attack](https://github.com/madclaws/dailyRustStatus/tree/master/queen-attack)
-
+64. [Perfect Numbers](https://github.com/madclaws/dailyRustStatus/tree/master/perfect-numbers)
