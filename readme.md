@@ -68,3 +68,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 62. [Sieve](https://github.com/madclaws/dailyRustStatus/tree/master/sieve)
 63. [Queen Attack](https://github.com/madclaws/dailyRustStatus/tree/master/queen-attack)
 64. [Perfect Numbers](https://github.com/madclaws/dailyRustStatus/tree/master/perfect-numbers)
+65. [Scrabble Score](https://github.com/madclaws/dailyRustStatus/tree/master/scrabble-score)
