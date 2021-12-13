@@ -70,3 +70,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 64. [Perfect Numbers](https://github.com/madclaws/dailyRustStatus/tree/master/perfect-numbers)
 65. [Scrabble Score](https://github.com/madclaws/dailyRustStatus/tree/master/scrabble-score)
 66. [largest Series Product](https://github.com/madclaws/dailyRustStatus/tree/master/largest-series-product)
+67. [Luhn From](https://github.com/madclaws/dailyRustStatus/tree/master/luhn-from)
