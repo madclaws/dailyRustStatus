@@ -72,3 +72,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 66. [largest Series Product](https://github.com/madclaws/dailyRustStatus/tree/master/largest-series-product)
 67. [Luhn From](https://github.com/madclaws/dailyRustStatus/tree/master/luhn-from)
 68. [Luhn Trait](https://github.com/madclaws/dailyRustStatus/tree/master/luhn-trait)
+69. [Maze Runner - Part2: Custom iterator (each_cell) over grid struct + configure_cells](https://github.com/madclaws/dailyRustStatus/tree/master/maze_runner)
