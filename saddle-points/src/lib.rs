@@ -16,7 +16,8 @@ pub fn find_saddle_points(input: &[Vec<u64>]) -> Vec<(usize, usize)> {
         }
         if let Some(index_info) = largest_row_index {
 
-            for index in 0..input.len() {
+            for index in 0..input[0].len() {
+                // println!("index {}{}", index_info.0, index);
                 if input[index_info.0][index] == index_info.2 as u64 {
                     greater_row_indices.push((
                         index_info.0,
@@ -29,9 +30,12 @@ pub fn find_saddle_points(input: &[Vec<u64>]) -> Vec<(usize, usize)> {
     }
 
     // For every column
-    for j in 0..input.len() {
+    for j in 0..input[0].len() {
         let mut smallest_col_index: Option<(usize, usize, usize)> = None;
-        for i in 0..input[j].len() {
+        // println!("row {}", j);
+        for i in 0..input.len() {
+            // println!("col {}", i);
+            println!("index {}{}", i, j);
             if smallest_col_index.is_none() {
                 smallest_col_index = Some((i, j, input[i][j] as usize));
             } else {

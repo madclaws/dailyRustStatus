@@ -65,7 +65,7 @@ fn non_square_matrix_high() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn non_square_matrix_wide() {
     let input = vec![vec![3, 1, 3], vec![3, 2, 4]];
     assert_eq!(vec![(0, 0), (0, 2)], find_sorted_saddle_points(&input));
