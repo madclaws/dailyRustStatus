@@ -76,3 +76,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 70. [Maze Runner - Part3: Binary tree implementation + ASCII renderer](https://github.com/madclaws/dailyRustStatus/tree/master/maze_runner)
 71. [Saddle Points](https://github.com/madclaws/dailyRustStatus/tree/master/saddle-points)
 72. [ISBN Verifier](https://github.com/madclaws/dailyRustStatus/tree/master/isbn-verifier)
+73. [Bit Counting](https://github.com/madclaws/dailyRustStatus/tree/master/bit-counting)
