@@ -77,3 +77,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 71. [Saddle Points](https://github.com/madclaws/dailyRustStatus/tree/master/saddle-points)
 72. [ISBN Verifier](https://github.com/madclaws/dailyRustStatus/tree/master/isbn-verifier)
 73. [Bit Counting](https://github.com/madclaws/dailyRustStatus/tree/master/bit-counting)
+74. [Like system](https://github.com/madclaws/dailyRustStatus/tree/master/like-system)
