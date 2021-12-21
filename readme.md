@@ -79,3 +79,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 73. [Bit Counting](https://github.com/madclaws/dailyRustStatus/tree/master/bit-counting)
 74. [Like system](https://github.com/madclaws/dailyRustStatus/tree/master/like-system)
 75. [Roman Numerals](https://github.com/madclaws/dailyRustStatus/tree/master/roman-numerals)
+76. [Phone Number](https://github.com/madclaws/dailyRustStatus/tree/master/phone-number)
