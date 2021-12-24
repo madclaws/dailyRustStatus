@@ -82,3 +82,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 76. [Phone Number](https://github.com/madclaws/dailyRustStatus/tree/master/phone-number)
 77. [Max product](https://github.com/madclaws/dailyRustStatus/tree/master/max-product)
 78. [Help the bookseller](https://github.com/madclaws/dailyRustStatus/tree/master/help-the-bookseller)
+79. [Prize Draw](https://github.com/madclaws/dailyRustStatus/tree/master/prize-draw)
