@@ -85,3 +85,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 79. [Prize Draw](https://github.com/madclaws/dailyRustStatus/tree/master/prize-draw)
 80. [IP Address count](https://github.com/madclaws/dailyRustStatus/tree/master/ip-address)
 81. [Sum consecutives](https://github.com/madclaws/dailyRustStatus/tree/master/sum-consecutives)
+82. [English Beggars](https://github.com/madclaws/dailyRustStatus/tree/master/english-beggars)
