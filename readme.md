@@ -87,4 +87,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 81. [Sum consecutives](https://github.com/madclaws/dailyRustStatus/tree/master/sum-consecutives)
 82. [English Beggars](https://github.com/madclaws/dailyRustStatus/tree/master/english-beggars)
 83. [Calculate String Rotation](https://github.com/madclaws/dailyRustStatus/tree/master/string-rotation)
-
+84. [Help your granny](https://github.com/madclaws/dailyRustStatus/tree/master/help-your-granny)
