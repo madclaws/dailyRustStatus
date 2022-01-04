@@ -93,3 +93,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 87. [PaintFuck Interpreter](https://github.com/madclaws/dailyRustStatus/tree/master/paintfuck-interpreter)
 88. [BrainFuck Interpreter (Part 1)](https://github.com/madclaws/dailyRustStatus/tree/master/brainfuck-interpreter)
 89. [BrainFuck Interpreter (Part 2) 😅](https://github.com/madclaws/dailyRustStatus/tree/master/brainfuck-interpreter)
+90. [Wordy (Math Evaluator)](https://github.com/madclaws/dailyRustStatus/tree/master/wordy)
