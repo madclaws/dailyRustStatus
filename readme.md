@@ -96,3 +96,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 90. [Wordy (Math Evaluator)](https://github.com/madclaws/dailyRustStatus/tree/master/wordy)
 91. [Flight Paths](https://github.com/madclaws/dailyRustStatus/tree/master/flight-paths)
 92. [ZOOM](https://github.com/madclaws/dailyRustStatus/tree/master/zoom)
+93. [Almost PI](https://github.com/madclaws/dailyRustStatus/tree/master/almost_pi)
