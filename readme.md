@@ -98,3 +98,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 92. [ZOOM](https://github.com/madclaws/dailyRustStatus/tree/master/zoom)
 93. [Almost PI](https://github.com/madclaws/dailyRustStatus/tree/master/almost_pi)
 94. [Molecular Mass Calculator](https://github.com/madclaws/dailyRustStatus/tree/master/molecular-mass-calculator)
+95. [Earthquake Epicenters](https://github.com/madclaws/dailyRustStatus/tree/master/earthquake-epicenters)
