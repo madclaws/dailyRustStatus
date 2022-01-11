@@ -99,3 +99,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 93. [Almost PI](https://github.com/madclaws/dailyRustStatus/tree/master/almost_pi)
 94. [Molecular Mass Calculator](https://github.com/madclaws/dailyRustStatus/tree/master/molecular-mass-calculator)
 95. [Earthquake Epicenters](https://github.com/madclaws/dailyRustStatus/tree/master/earthquake-epicenters)
+96. [Habitable Exoplanets](https://github.com/madclaws/dailyRustStatus/tree/master/habitable-exoplanets)
