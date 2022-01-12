@@ -101,3 +101,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 95. [Earthquake Epicenters](https://github.com/madclaws/dailyRustStatus/tree/master/earthquake-epicenters)
 96. [Habitable Exoplanets](https://github.com/madclaws/dailyRustStatus/tree/master/habitable-exoplanets)
 97. [ENSO Classification](https://github.com/madclaws/dailyRustStatus/tree/master/enso-classification)
+98. [Diamond](https://github.com/madclaws/dailyRustStatus/tree/master/diamond)
