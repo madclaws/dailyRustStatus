@@ -102,3 +102,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 96. [Habitable Exoplanets](https://github.com/madclaws/dailyRustStatus/tree/master/habitable-exoplanets)
 97. [ENSO Classification](https://github.com/madclaws/dailyRustStatus/tree/master/enso-classification)
 98. [Diamond](https://github.com/madclaws/dailyRustStatus/tree/master/diamond)
+99. [Maze Runner[5] - Sidewinder algorithm](https://github.com/madclaws/maze_runner/commit/7711d9a0e9820fb1e0109eebafbb52379c4cc0c6)
