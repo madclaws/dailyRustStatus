@@ -104,3 +104,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 98. [Diamond](https://github.com/madclaws/dailyRustStatus/tree/master/diamond)
 99. [Maze Runner[5] - Sidewinder algorithm](https://github.com/madclaws/maze_runner/commit/7711d9a0e9820fb1e0109eebafbb52379c4cc0c6)
 100. [Maze Runner[6] - Macroquad enters the party](https://github.com/madclaws/maze_runner/commit/e24ae4171990b44da401da6eaf1eaaddef3924c6)
+101. [Maze Runner[7] - Relative cells dist from root](https://github.com/madclaws/maze_runner/commit/3a8249674c169aaea096f39b42250a6e1e3772f6)
