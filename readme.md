@@ -106,3 +106,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 100. [Maze Runner[6] - Macroquad enters the party](https://github.com/madclaws/maze_runner/commit/e24ae4171990b44da401da6eaf1eaaddef3924c6)
 101. [Maze Runner[7] - Relative cells dist from root](https://github.com/madclaws/maze_runner/commit/3a8249674c169aaea096f39b42250a6e1e3772f6)
 102. [Maze Runner[8] - Maze solver (Dijkstras)](https://github.com/madclaws/maze_runner/commit/bc0954e39a1211cbce09e309f999af7173a3519e)
+103. [Maze Runner[9] - Harder Mazes](https://github.com/madclaws/maze_runner/commit/bfdf2515586a89d31ddd990b859d03a46bb1972e)
