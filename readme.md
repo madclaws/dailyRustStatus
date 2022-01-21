@@ -109,3 +109,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 103. [Maze Runner[9] - Harder Mazes](https://github.com/madclaws/maze_runner/commit/bfdf2515586a89d31ddd990b859d03a46bb1972e)
 104. [Maze Runner[10] - Coloring Mazes](https://github.com/madclaws/maze_runner/commit/ec95b183d6e81d0af2d78a1bb30c0da4212e358c)
 105. [Maze Runner[11] - Using Aldous-Broder algorithm](https://github.com/madclaws/maze_runner/commit/57600cd005983ba92756cd03c338541b16b2c9c2)
+106. [Maze Runner[12] - Wilson's (part 1)](https://github.com/madclaws/maze_runner/commit/1aae8a57d42a3e419fc915dc599af92a60d3e1e4)
