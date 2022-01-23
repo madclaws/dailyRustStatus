@@ -111,3 +111,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 105. [Maze Runner[11] - Using Aldous-Broder algorithm](https://github.com/madclaws/maze_runner/commit/57600cd005983ba92756cd03c338541b16b2c9c2)
 106. [Maze Runner[12] - Wilson's (part 1)](https://github.com/madclaws/maze_runner/commit/1aae8a57d42a3e419fc915dc599af92a60d3e1e4)
 107. [Maze Runner[13] - Wilson's (part 2)](https://github.com/madclaws/maze_runner/commit/d8e5c5f6c331948aced109074452d83fa64dfb12)
+108. [Maze Runner[14] - Hunt and kill algorithm](https://github.com/madclaws/maze_runner/commit/05c5c3fed8cdc453ab367e1882c2b190dca498c1)
