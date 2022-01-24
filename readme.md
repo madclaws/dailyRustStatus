@@ -113,3 +113,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 107. [Maze Runner[13] - Wilson's (part 2)](https://github.com/madclaws/maze_runner/commit/d8e5c5f6c331948aced109074452d83fa64dfb12)
 108. [Maze Runner[14] - Hunt and kill algorithm](https://github.com/madclaws/maze_runner/commit/05c5c3fed8cdc453ab367e1882c2b190dca498c1)
 109. [Factorial](https://github.com/madclaws/dailyRustStatus/tree/master/factorial)
+110. [Maze Runner[15] - Deadend counter](https://github.com/madclaws/maze_runner/commit/eeeca0c3cf65edd7a15cef54441b9d7c26e148bc)
