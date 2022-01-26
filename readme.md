@@ -114,3 +114,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 108. [Maze Runner[14] - Hunt and kill algorithm](https://github.com/madclaws/maze_runner/commit/05c5c3fed8cdc453ab367e1882c2b190dca498c1)
 109. [Factorial](https://github.com/madclaws/dailyRustStatus/tree/master/factorial)
 110. [Maze Runner[15] - Deadend counter](https://github.com/madclaws/maze_runner/commit/eeeca0c3cf65edd7a15cef54441b9d7c26e148bc)
+111. [Maze Runner[16] - Recursive backtracker algorithm](https://github.com/madclaws/maze_runner/commit/ae84db1e7a554e818ea7cdb5b4f9bee9bec62a28)
