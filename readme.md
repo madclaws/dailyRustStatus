@@ -117,3 +117,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 111. [Maze Runner[16] - Recursive backtracker algorithm](https://github.com/madclaws/maze_runner/commit/ae84db1e7a554e818ea7cdb5b4f9bee9bec62a28)
 112. [Nebula[1] - Window + Input + Renderloop](https://github.com/madclaws/nebula/commit/a8c62e4326a826364db51bb3423b1625f2dce1e1)
 113. [Maze Runner[17] - Masking part-I](https://github.com/madclaws/maze_runner/commit/449ef8e04f47686bad517a98f949976a37529ca5)
+114. [Nebula[2] - Triangle-1](https://github.com/madclaws/nebula/commit/78c04ddb8050c5dcb62d323c806dcc5894087622)
