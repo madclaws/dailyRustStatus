@@ -120,3 +120,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 114. [Nebula[2] - Triangle-1](https://github.com/madclaws/nebula/commit/78c04ddb8050c5dcb62d323c806dcc5894087622)
 115. [Nebula[3] - Rendered triangle](https://github.com/madclaws/nebula/commit/67b1189678e3af9ddf71ac9a2b1d6e558b250ac9)
 116. [Maze Runner[18] - ASCII Masks](https://github.com/madclaws/maze_runner/commit/763fb51ee0b4489a4fcc007d75af9edbf5fcb548)
+117. [Maze Runner[19] - Masking with images - I](https://github.com/madclaws/maze_runner/commit/0e29592e3054972f8fa778b9fb15939d38831283)
