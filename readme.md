@@ -122,3 +122,5 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 116. [Maze Runner[18] - ASCII Masks](https://github.com/madclaws/maze_runner/commit/763fb51ee0b4489a4fcc007d75af9edbf5fcb548)
 117. [Maze Runner[19] - Masking with images - I](https://github.com/madclaws/maze_runner/commit/0e29592e3054972f8fa778b9fb15939d38831283)
 118. [Maze Runner[20] - Masking with images - II](https://github.com/madclaws/maze_runner/commit/8e5154d329fec4320fa33a3bd672ecd40d047efd)
+119. [Nebula[4] - Rendered rectange](https://github.com/madclaws/nebula/commit/5b8eeecf6a68cb503d28f7075be27a9f744b7f7e)
+
