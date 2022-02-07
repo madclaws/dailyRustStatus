@@ -126,3 +126,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 120. [Grade School](https://github.com/madclaws/dailyRustStatus/tree/master/grade-school)
 121. [Lottery Ticket](https://github.com/madclaws/dailyRustStatus/tree/master/lottery)
 122. [Nebula[4] - using multiple shader program](https://github.com/madclaws/nebula/commit/4f35cf52575eaf0d51256c3588ad8e3800861cee)
+123. [Deadfish interpreter](https://github.com/madclaws/dailyRustStatus/tree/master/deadfish-interpreter)
