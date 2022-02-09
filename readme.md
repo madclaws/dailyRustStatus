@@ -128,3 +128,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 122. [Nebula[4] - using multiple shader program](https://github.com/madclaws/nebula/commit/4f35cf52575eaf0d51256c3588ad8e3800861cee)
 123. [Deadfish interpreter](https://github.com/madclaws/dailyRustStatus/tree/master/deadfish-interpreter)
 124. [Nebula[6] - Modularizing into Apps](https://github.com/madclaws/nebula/commit/de72ec1db24330e75b6daf558745be2a6291f7f3)
+125. [Nebula[7] - Uniforms and animation](https://github.com/madclaws/nebula/commit/c10ad6c6e2ebeeb54688bd71c36f66a8ada9de9d)
