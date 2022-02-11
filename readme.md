@@ -130,3 +130,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 124. [Nebula[6] - Modularizing into Apps](https://github.com/madclaws/nebula/commit/de72ec1db24330e75b6daf558745be2a6291f7f3)
 125. [Nebula[7] - Uniforms and animation](https://github.com/madclaws/nebula/commit/c10ad6c6e2ebeeb54688bd71c36f66a8ada9de9d)
 126. [Correlation coefficient](https://github.com/madclaws/dailyRustStatus/tree/master/pearson-coefficient)
+127. [Nebula[8] - vertex interpolation and shader module(1)](https://github.com/madclaws/nebula/commit/56b7557c9ba9c74aee8d16d6c26f1a0427af3752)
