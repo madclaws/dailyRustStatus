@@ -135,3 +135,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 129. [Climate Model](https://github.com/madclaws/dailyRustStatus/tree/master/climate-model)
 130. [Bernoulli Number (1)](https://github.com/madclaws/dailyRustStatus/tree/master/bernoulli)
 131. [Bernoulli Number(2)](https://github.com/madclaws/dailyRustStatus/tree/master/bernoulli)
+132. [Street Fighter Selection](https://github.com/madclaws/dailyRustStatus/tree/master/street_fighter_selection)
