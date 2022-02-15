@@ -134,3 +134,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 128. [Nebula[9] - Competed Shader Module](https://github.com/madclaws/nebula/commit/cf07a2b45f8fa3b93b3fa7232ab8ddbc6f2cc8d8)
 129. [Climate Model](https://github.com/madclaws/dailyRustStatus/tree/master/climate-model)
 130. [Bernoulli Number (1)](https://github.com/madclaws/dailyRustStatus/tree/master/bernoulli)
+131. [Bernoulli Number(2)](https://github.com/madclaws/dailyRustStatus/tree/master/bernoulli)
