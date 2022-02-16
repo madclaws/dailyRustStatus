@@ -136,3 +136,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 130. [Bernoulli Number (1)](https://github.com/madclaws/dailyRustStatus/tree/master/bernoulli)
 131. [Bernoulli Number(2)](https://github.com/madclaws/dailyRustStatus/tree/master/bernoulli)
 132. [Street Fighter Selection](https://github.com/madclaws/dailyRustStatus/tree/master/street_fighter_selection)
+133. [Dashatize](https://github.com/madclaws/dailyRustStatus/tree/master/dashatize)
