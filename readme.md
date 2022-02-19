@@ -138,3 +138,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 132. [Street Fighter Selection](https://github.com/madclaws/dailyRustStatus/tree/master/street_fighter_selection)
 133. [Dashatize](https://github.com/madclaws/dailyRustStatus/tree/master/dashatize)
 134. [Super street fighter](https://github.com/madclaws/dailyRustStatus/tree/master/street_fighter_selection_2)
+135. [Simple Cipher (Encode)](https://github.com/madclaws/dailyRustStatus/tree/master/simple-cipher)
