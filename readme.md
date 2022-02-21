@@ -140,3 +140,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 134. [Super street fighter](https://github.com/madclaws/dailyRustStatus/tree/master/street_fighter_selection_2)
 135. [Simple Cipher (Encode)](https://github.com/madclaws/dailyRustStatus/tree/master/simple-cipher)
 136. [Simple Cipher (decode + random key)](https://github.com/madclaws/dailyRustStatus/tree/master/simple-cipher)
+137. [Chaos](https://github.com/madclaws/dailyRustStatus/tree/master/chaos)
