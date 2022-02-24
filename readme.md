@@ -143,3 +143,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 137. [Chaos](https://github.com/madclaws/dailyRustStatus/tree/master/chaos)
 138. [Spiral Matrix - Part 1](https://github.com/madclaws/dailyRustStatus/tree/master/spiral-matrix)
 139. [Spiral Matrix - Part 2](https://github.com/madclaws/dailyRustStatus/tree/master/spiral-matrix)
+140. [async-await - intro](https://github.com/madclaws/dailyRustStatus/tree/master/async-await)

@@ -24,7 +24,6 @@ pub fn spiral_matrix(size: u32) -> Vec<Vec<u32>> {
                     current_row += 1;
                     current_direciton = get_next_direction(current_direciton);
                 } else {
-                    ;
                     current_col += 1;
                 }
             }
