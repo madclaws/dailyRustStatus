@@ -147,3 +147,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 141. [async-await - part 2](https://github.com/madclaws/dailyRustStatus/tree/master/async-await)
 142. [pingp2p](https://github.com/madclaws/dailyRustStatus/tree/master/pingp2p)
 143. [Generic Binary search](https://github.com/madclaws/dailyRustStatus/tree/master/binary-search)
+144. [Chatp2p - part1](https://github.com/madclaws/dailyRustStatus/tree/master/chatp2p)
