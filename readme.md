@@ -149,3 +149,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 143. [Generic Binary search](https://github.com/madclaws/dailyRustStatus/tree/master/binary-search)
 144. [Chatp2p - part1](https://github.com/madclaws/dailyRustStatus/tree/master/chatp2p)
 145. [Exponential growth](https://github.com/madclaws/dailyRustStatus/tree/master/exponential-growth)
+146. [Fibonacci](https://github.com/madclaws/dailyRustStatus/tree/master/fibonacci)
