@@ -150,3 +150,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 144. [Chatp2p - part1](https://github.com/madclaws/dailyRustStatus/tree/master/chatp2p)
 145. [Exponential growth](https://github.com/madclaws/dailyRustStatus/tree/master/exponential-growth)
 146. [Fibonacci](https://github.com/madclaws/dailyRustStatus/tree/master/fibonacci)
+147. [Crypto Square](https://github.com/madclaws/dailyRustStatus/tree/master/crypto-square)
