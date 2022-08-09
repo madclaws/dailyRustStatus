@@ -4,11 +4,15 @@ pub enum Error {
     GameComplete,
 }
 
-pub struct BowlingGame {}
+pub struct BowlingGame {
+    score: u16,
+    current_frame: u16,
+    frame_list: Vec<u16>
+}
 
 impl BowlingGame {
     pub fn new() -> Self {
-        BowlingGame{}
+        BowlingGame{score: 0, current_frame: 0, frame_list: Vec::new()}
     }
 
     pub fn roll(&mut self, pins: u16) -> Result<(), Error> {
