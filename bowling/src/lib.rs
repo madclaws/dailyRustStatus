@@ -7,6 +7,7 @@ pub enum Error {
 pub struct BowlingGame {
     score: u16,
     current_frame: u16,
+    current_subframe: u16,
     sub_frames: Vec<u16>,
     is_game_completed: bool
 }
@@ -14,7 +15,7 @@ pub struct BowlingGame {
 impl BowlingGame {
     pub fn new() -> Self {
         BowlingGame{
-            score: 0, current_frame: 0, sub_frames: Vec::new(),
+            score: 0, current_frame: 1, current_subframe: 1, sub_frames: Vec::new(),
             is_game_completed: false
         }
     }
