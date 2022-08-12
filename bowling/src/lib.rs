@@ -24,7 +24,9 @@ impl BowlingGame {
         // open frame 
         if pins < 10 {
             // score should be stored for current subframe
-            self.sub_frames.push(pins);
+            if self.current_subframe == 1 {
+                self.sub_frames.push(pins);
+            }
             // handle for existing spare
             // handle for existing streak
         }
