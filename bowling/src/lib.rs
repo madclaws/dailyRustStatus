@@ -8,7 +8,8 @@ pub struct BowlingGame {
     current_frame: u16,
     frames: Vec<Frame>,
     is_game_completed: bool,
-    spare_frame: Option<u16>
+    spare_frame: Option<u16>,
+    strike_frames: Vec<StrikeFrame>
 }
 
 #[derive(Clone)]
@@ -28,6 +29,19 @@ impl Frame {
     }
 }
 
+#[derive(Clone)]
+pub struct StrikeFrame {
+    frame_index: u16,
+    next_rolls: Vec<u16>,
+    active: bool
+}
+
+impl StrikeFrame {
+    pub fn new(frame_index: u16) -> Self {
+        StrikeFrame{frame_index, next_rolls: Vec::new(), active: true}
+    }
+}
+
 impl BowlingGame {
     pub fn new() -> Self {
         BowlingGame {
@@ -35,6 +49,7 @@ impl BowlingGame {
             current_frame: 0,
             frames: vec![Frame::new(); 10],
             is_game_completed: false,
+            strike_frames: Vec::new()
         }
     }
 
@@ -47,6 +62,7 @@ impl BowlingGame {
         // open frame
         if self.current_frame < 10 {
             let frame_index = self.current_frame;
+            let mut is_current_frame_strike = false;
             {
                 let current_frame = &mut self.frames[self.current_frame as usize];
                 current_frame.sub_frames[current_frame.current_subframe as usize] = pins;
@@ -58,18 +74,28 @@ impl BowlingGame {
                     }
                     self.current_frame += 1;
                 } else {
-                    current_frame.current_subframe += 1
+                    if pins == 10 {
+                        // A strike
+                        println!("Strike on frame {}", self.current_frame);
+                        let strike_frame = StrikeFrame::new(self.current_frame);
+                        self.strike_frames.push(strike_frame);
+                        is_current_frame_strike = true;
+                        self.current_frame += 1;
+                    } else {
+                        current_frame.current_subframe += 1
+                    }
                 }
             }
             
             // This means the roll was for first sub_frame
-            if frame_index == self.current_frame {
+            if frame_index == self.current_frame || is_current_frame_strike{
                  // // Check if a spare exists, if then update spareframe total_score
                 if let Some(frame) = self.spare_frame {
                     println!("A spare exists at frame {}", frame);
                     self.frames[frame as usize].total += pins;
                     self.spare_frame = None;
                 }
+                // find the active strike frames and update them
             }
 
             if self.current_frame == 10 {
