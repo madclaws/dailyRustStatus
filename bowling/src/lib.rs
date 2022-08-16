@@ -96,6 +96,18 @@ impl BowlingGame {
                     self.spare_frame = None;
                 }
                 // find the active strike frames and update them
+                for strike_frame in &mut self.strike_frames {
+                    if strike_frame.active {
+                        strike_frame.next_rolls.push(pins);
+                        if strike_frame.next_rolls.len() == 2 {
+                            strike_frame.active = false;
+                            let total_frame_score: u16 = strike_frame.next_rolls.iter().sum();
+                            self.frames[strike_frame.frame_index as usize].total = total_frame_score;
+                        }
+                    }
+                }
+
+                // TODO: Handle strike frame count on the second frame, which is inside the first scope
             }
 
             if self.current_frame == 10 {
