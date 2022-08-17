@@ -118,7 +118,7 @@ impl BowlingGame {
                     }
                 }
 
-                // TODO: Handle strike frame count on the second frame, which is inside the first scope
+                
             }
 
             if self.current_frame == 10 {
