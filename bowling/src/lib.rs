@@ -73,6 +73,17 @@ impl BowlingGame {
                         self.spare_frame = Some(self.current_frame)
                     }
                     self.current_frame += 1;
+
+                    for strike_frame in &mut self.strike_frames {
+                        if strike_frame.active {
+                            strike_frame.next_rolls.push(pins);
+                            if strike_frame.next_rolls.len() == 2 {
+                                strike_frame.active = false;
+                                let total_frame_score: u16 = strike_frame.next_rolls.iter().sum();
+                                self.frames[strike_frame.frame_index as usize].total = total_frame_score;
+                            }
+                        }
+                    }
                 } else {
                     if pins == 10 {
                         // A strike
