@@ -65,7 +65,9 @@ impl BowlingGame {
             let mut is_current_frame_strike = false;
             {
                 let current_frame = &mut self.frames[self.current_frame as usize];
-                current_frame.sub_frames[current_frame.current_subframe as usize] = pins;
+                if pins != 10 {
+                    current_frame.sub_frames[current_frame.current_subframe as usize] = pins;
+                }
                 if current_frame.current_subframe == 1 {
                     current_frame.total = current_frame.sub_frames.iter().sum();
                     if current_frame.total == 10 {
@@ -76,11 +78,12 @@ impl BowlingGame {
 
                     for strike_frame in &mut self.strike_frames {
                         if strike_frame.active {
+                            println!("Strike frame exists at {}", strike_frame.frame_index);
                             strike_frame.next_rolls.push(pins);
                             if strike_frame.next_rolls.len() == 2 {
                                 strike_frame.active = false;
                                 let total_frame_score: u16 = strike_frame.next_rolls.iter().sum();
-                                self.frames[strike_frame.frame_index as usize].total = total_frame_score;
+                                self.frames[strike_frame.frame_index as usize].total = total_frame_score + 10;
                             }
                         }
                     }
@@ -91,6 +94,8 @@ impl BowlingGame {
                         let strike_frame = StrikeFrame::new(self.current_frame);
                         self.strike_frames.push(strike_frame);
                         is_current_frame_strike = true;
+                        // updating streak score on first sub-frame
+                        // self.frames[self.current_frame as usize].total = pins;
                         self.current_frame += 1;
                     } else {
                         current_frame.current_subframe += 1
@@ -108,12 +113,14 @@ impl BowlingGame {
                 }
                 // find the active strike frames and update them
                 for strike_frame in &mut self.strike_frames {
-                    if strike_frame.active {
+                    if strike_frame.active && !is_current_frame_strike {
+                        println!("Strike frame exists at {}", strike_frame.frame_index);
                         strike_frame.next_rolls.push(pins);
+                        println!("Pins added to strike frame {}", pins);
                         if strike_frame.next_rolls.len() == 2 {
                             strike_frame.active = false;
                             let total_frame_score: u16 = strike_frame.next_rolls.iter().sum();
-                            self.frames[strike_frame.frame_index as usize].total = total_frame_score;
+                            self.frames[strike_frame.frame_index as usize].total = total_frame_score + 10;
                         }
                     }
                 }
@@ -131,7 +138,10 @@ impl BowlingGame {
     pub fn score(&self) -> Option<u16> {
         if self.is_game_completed {
             let mut total_score: u16 = 0;
+            let mut frame_no: u16 = 0;
             for frame in &self.frames {
+                println!("Frame no:{} => {}", frame_no, frame.total);
+                frame_no += 1;
                 total_score += frame.total;
             }
             Some(total_score)
