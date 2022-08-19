@@ -7,7 +7,7 @@ fn roll_returns_a_result() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn you_cannot_roll_more_than_ten_pins_in_a_single_roll() {
     let mut game = BowlingGame::new();
 
@@ -15,7 +15,7 @@ fn you_cannot_roll_more_than_ten_pins_in_a_single_roll() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn a_game_score_is_some_if_ten_frames_have_been_rolled() {
     let mut game = BowlingGame::new();
 
@@ -28,7 +28,7 @@ fn a_game_score_is_some_if_ten_frames_have_been_rolled() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn you_cannot_score_a_game_with_no_rolls() {
     let game = BowlingGame::new();
 
@@ -36,7 +36,7 @@ fn you_cannot_score_a_game_with_no_rolls() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn a_game_score_is_none_if_fewer_than_ten_frames_have_been_rolled() {
     let mut game = BowlingGame::new();
 
@@ -49,7 +49,7 @@ fn a_game_score_is_none_if_fewer_than_ten_frames_have_been_rolled() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn a_roll_is_err_if_the_game_is_done() {
     let mut game = BowlingGame::new();
 
@@ -62,7 +62,7 @@ fn a_roll_is_err_if_the_game_is_done() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn twenty_zero_pin_rolls_scores_zero() {
     let mut game = BowlingGame::new();
 
@@ -74,7 +74,7 @@ fn twenty_zero_pin_rolls_scores_zero() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn ten_frames_without_a_strike_or_spare() {
     let mut game = BowlingGame::new();
 
@@ -87,7 +87,7 @@ fn ten_frames_without_a_strike_or_spare() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn spare_in_the_first_frame_followed_by_zeros() {
     let mut game = BowlingGame::new();
 
