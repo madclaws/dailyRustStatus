@@ -146,9 +146,8 @@ impl BowlingGame {
             let mut total_score: u16 = 0;
             let mut frame_no: u16 = 0;
             for frame in &self.frames {
-                let frame_total_score = frame.sub_frames.iter().sum::<u16>();
-                total_score += frame_total_score;
-                println!("Frame no:{} => {}", frame_no, frame_total_score);
+                total_score += frame.total;
+                println!("Frame no:{} => {}", frame_no, frame.total);
                 frame_no += 1;
             }
             Some(total_score)
@@ -164,10 +163,35 @@ impl BowlingGame {
             self.current_frame = current_frame;
             if self.is_pin_valid(pins) {
                 self.frames[current_frame as usize].sub_frames.push(pins);
+                if self.current_frame < 9
+                    && self.frames[current_frame as usize].sub_frames.len() == 2
+                {
+                    // calculate the total score if frame is finished
+                    self.frames[current_frame as usize].total =
+                        self.frames[current_frame as usize].sub_frames.iter().sum();
+                } else if self.current_frame == 9
+                    && self.frames[current_frame as usize].sub_frames.len() >= 2
+                {
+                    self.frames[current_frame as usize].total =
+                        self.frames[current_frame as usize].sub_frames.iter().sum();
+                } else {
+                    // if sub_frame is 0, then check if previous frame is spare, if yes, then add current pin
+                    // to its total score.
+                    if self.current_frame > 0 && self.is_spare(self.current_frame - 1) {
+                        println!("SPARE FRAME {}", self.current_frame);
+                        self.frames[(self.current_frame - 1) as usize].total += pins
+                    }
+                }
             } else {
                 return Err(Error::NotEnoughPinsLeft);
             }
-            if self.current_frame == 9 && self.frames[current_frame as usize].sub_frames.len() >= 2
+            if self.current_frame == 9
+                && self.frames[current_frame as usize].sub_frames.len() == 2
+                && !self.is_spare(9)
+            {
+                self.is_game_completed = true;
+            } else if self.current_frame == 9
+                && self.frames[current_frame as usize].sub_frames.len() == 3
             {
                 self.is_game_completed = true;
             }
@@ -185,23 +209,42 @@ impl BowlingGame {
             } else {
                 Some(self.current_frame + 1)
             }
-        } else if self.current_frame == 9 {
-            // Will take care of sub_frame 3 later
-            if self.frames[self.current_frame as usize].sub_frames.len() < 2 {
-                Some(self.current_frame)
-            } else {
-                None
-            }
+        } else if self.frames[self.current_frame as usize].sub_frames.len() < 2 {
+            Some(self.current_frame)
+        } else if self.frames[self.current_frame as usize].sub_frames.len() == 2
+            && self.is_spare(self.current_frame)
+        {
+            Some(self.current_frame)
         } else {
             None
         }
     }
 
     fn is_pin_valid(&self, pins: u16) -> bool {
-        pins <= (10
-            - self.frames[self.current_frame as usize]
-                .sub_frames
-                .iter()
-                .sum::<u16>())
+        if self.current_frame < 9 {
+            pins <= (10
+                - self.frames[self.current_frame as usize]
+                    .sub_frames
+                    .iter()
+                    .sum::<u16>())
+        } else if self.frames[self.current_frame as usize].sub_frames.len() <= 2
+            && !self.is_spare(self.current_frame)
+        {
+            pins <= (10
+                - self.frames[self.current_frame as usize]
+                    .sub_frames
+                    .iter()
+                    .sum::<u16>())
+        } else {
+            pins <= 10
+        }
+    }
+
+    fn is_spare(&self, frame_index: u16) -> bool {
+        self.frames[frame_index as usize]
+            .sub_frames
+            .iter()
+            .sum::<u16>()
+            == 10
     }
 }
