@@ -56,7 +56,7 @@ impl BowlingGame {
             strike_frames: Vec::new(),
         }
     }
-    
+
     pub fn score(&self) -> Option<u16> {
         if self.is_game_completed {
             let mut total_score: u16 = 0;
@@ -79,11 +79,13 @@ impl BowlingGame {
             self.current_frame = current_frame;
             if self.is_pin_valid(pins) {
                 self.frames[current_frame as usize].sub_frames.push(pins);
+                println!("pins {} pushed on frame {}, subframe {}", pins, self.current_frame, self.frames[current_frame as usize].sub_frames.len());
                 if self.current_frame < 9
                     && self.frames[current_frame as usize].sub_frames.len() == 2
                 {
                     // calculate the total score if frame is finished
                     self.frames[current_frame as usize].total = self.get_subframes_sum(current_frame);
+                    self.handle_active_strikes(pins);
                 } else if self.current_frame == 9
                     && self.frames[current_frame as usize].sub_frames.len() >= 2
                 {
@@ -95,27 +97,7 @@ impl BowlingGame {
                         println!("SPARE FRAME {}", self.current_frame);
                         self.frames[(self.current_frame - 1) as usize].total += pins
                     }
-                    // check if an active strikeframe is there.., then add the pins to its nextrolls
-                    let mut strike_index: i16 = -1;
-                    if let Some(strike_frame) = self.get_strike_frame() {
-                        strike_index = strike_frame.frame_index as i16;
-                    }
-                    println!("Active strike index => {}", strike_index);
-                    if strike_index >= 0 {
-                        self.strike_frames[strike_index as usize]
-                            .next_rolls
-                            .push(pins);
-                        let frame_index = self.strike_frames[strike_index as usize].frame_index;
-                        if self.strike_frames[strike_index as usize].next_rolls.len() == 2 {
-                            self.strike_frames[strike_index as usize].active = false;
-                            self.frames[frame_index as usize].total = self.strike_frames
-                                [strike_index as usize]
-                                .next_rolls
-                                .iter()
-                                .sum::<u16>()
-                                + 10;
-                        }
-                    }
+                    self.handle_active_strikes(pins);
                     // strike on first sub_frame
                     if pins == 10 {
                         self.strike_frames
@@ -142,8 +124,9 @@ impl BowlingGame {
     }
 
     /// Returns the frame and subframe for the points to be added
-    fn get_valid_frame(&self, pins: u16) -> Option<u16> {
+    fn get_valid_frame(&self, _pins: u16) -> Option<u16> {
         if self.current_frame < 9 {
+            // println!("subframes of current frame {} are {}", self.current_frame, self.frames[self.current_frame as usize].sub_frames.len());
             if self.frames[self.current_frame as usize].sub_frames.len() < 2 {
                 if self.frames[self.current_frame as usize].sub_frames.len() == 1
                     && self.get_subframes_sum(self.current_frame) == 10
@@ -192,5 +175,30 @@ impl BowlingGame {
             .sub_frames
             .iter()
             .sum::<u16>()
+    }
+
+    fn handle_active_strikes(&mut self, pins: u16) {
+        let mut strike_index: i16 = -1;
+        if let Some(strike_frame) = self.get_strike_frame() {
+            strike_index = strike_frame.frame_index as i16;
+        }
+
+        if strike_index >= 0 {
+            self.strike_frames[strike_index as usize]
+            .next_rolls
+            .push(pins);
+            println!("pushed pins {} to next roll of strike {}", pins, strike_index);
+                let frame_index = self.strike_frames[strike_index as usize].frame_index;
+                // println!("current frame index {} , next roll pins {}", self.current_frame, pins);
+            if self.strike_frames[strike_index as usize].next_rolls.len() == 2 {
+                self.strike_frames[strike_index as usize].active = false;
+                self.frames[frame_index as usize].total = self.strike_frames
+                    [strike_index as usize]
+                    .next_rolls
+                    .iter()
+                    .sum::<u16>()
+                    + self.get_subframes_sum(strike_index as u16);
+            }
+        }
     }
 }
