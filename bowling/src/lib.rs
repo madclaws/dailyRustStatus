@@ -79,17 +79,24 @@ impl BowlingGame {
             self.current_frame = current_frame;
             if self.is_pin_valid(pins) {
                 self.frames[current_frame as usize].sub_frames.push(pins);
-                println!("pins {} pushed on frame {}, subframe {}", pins, self.current_frame, self.frames[current_frame as usize].sub_frames.len());
+                println!(
+                    "pins {} pushed on frame {}, subframe {}",
+                    pins,
+                    self.current_frame,
+                    self.frames[current_frame as usize].sub_frames.len()
+                );
                 if self.current_frame < 9
                     && self.frames[current_frame as usize].sub_frames.len() == 2
                 {
                     // calculate the total score if frame is finished
-                    self.frames[current_frame as usize].total = self.get_subframes_sum(current_frame);
+                    self.frames[current_frame as usize].total =
+                        self.get_subframes_sum(current_frame);
                     self.handle_active_strikes(pins);
                 } else if self.current_frame == 9
                     && self.frames[current_frame as usize].sub_frames.len() >= 2
                 {
-                    self.frames[current_frame as usize].total = self.get_subframes_sum(current_frame)
+                    self.frames[current_frame as usize].total =
+                        self.get_subframes_sum(current_frame)
                 } else {
                     // if sub_frame is 0, then check if previous frame is spare, if yes, then add current pin
                     // to its total score.
@@ -166,8 +173,12 @@ impl BowlingGame {
             && self.frames[frame_index as usize].sub_frames.len() == 2
     }
 
-    fn get_strike_frame(&self) -> Option<&StrikeFrame> {
-        self.strike_frames.iter().find(|&frame| frame.active)
+    fn get_strike_frames(&self) -> Vec<u16> {
+        self.strike_frames
+            .iter()
+            .filter(|&frame| frame.active)
+            .map(|strikeframe| strikeframe.frame_index)
+            .collect::<Vec<u16>>()
     }
 
     fn get_subframes_sum(&self, frame_index: u16) -> u16 {
@@ -178,26 +189,19 @@ impl BowlingGame {
     }
 
     fn handle_active_strikes(&mut self, pins: u16) {
-        let mut strike_index: i16 = -1;
-        if let Some(strike_frame) = self.get_strike_frame() {
-            strike_index = strike_frame.frame_index as i16;
-        }
-
-        if strike_index >= 0 {
-            self.strike_frames[strike_index as usize]
-            .next_rolls
-            .push(pins);
-            println!("pushed pins {} to next roll of strike {}", pins, strike_index);
-                let frame_index = self.strike_frames[strike_index as usize].frame_index;
-                // println!("current frame index {} , next roll pins {}", self.current_frame, pins);
-            if self.strike_frames[strike_index as usize].next_rolls.len() == 2 {
-                self.strike_frames[strike_index as usize].active = false;
-                self.frames[frame_index as usize].total = self.strike_frames
-                    [strike_index as usize]
+        let strikeindexes = self.get_strike_frames();
+        for index in strikeindexes {
+            self.strike_frames[index as usize].next_rolls.push(pins);
+            println!("pushed pins {} to next roll of strike {}", pins, index);
+            let frame_index = self.strike_frames[index as usize].frame_index;
+            // println!("current frame index {} , next roll pins {}", self.current_frame, pins);
+            if self.strike_frames[index as usize].next_rolls.len() == 2 {
+                self.strike_frames[index as usize].active = false;
+                self.frames[frame_index as usize].total = self.strike_frames[index as usize]
                     .next_rolls
                     .iter()
                     .sum::<u16>()
-                    + self.get_subframes_sum(strike_index as u16);
+                    + self.get_subframes_sum(index as u16);
             }
         }
     }
