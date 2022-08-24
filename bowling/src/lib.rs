@@ -8,14 +8,12 @@ pub struct BowlingGame {
     current_frame: u16,
     frames: Vec<Frame>,
     is_game_completed: bool,
-    spare_frame: Option<u16>,
     strike_frames: Vec<StrikeFrame>,
 }
 
 #[derive(Clone)]
 pub struct Frame {
     sub_frames: Vec<u16>,
-    current_subframe: u16,
     total: u16,
 }
 
@@ -24,7 +22,6 @@ impl Frame {
         Frame {
             sub_frames: Vec::new(),
             total: 0,
-            current_subframe: 0,
         }
     }
 }
@@ -49,7 +46,6 @@ impl StrikeFrame {
 impl BowlingGame {
     pub fn new() -> Self {
         BowlingGame {
-            spare_frame: None,
             current_frame: 0,
             frames: vec![Frame::new(); 10],
             is_game_completed: false,
@@ -145,11 +141,11 @@ impl BowlingGame {
             } else {
                 Some(self.current_frame + 1)
             }
-        } else if self.frames[self.current_frame as usize].sub_frames.len() < 2 {
-            Some(self.current_frame)
         } else if self.frames[self.current_frame as usize].sub_frames.len() == 2
             && self.is_spare(self.current_frame)
         {
+            Some(self.current_frame)
+        } else if self.frames[self.current_frame as usize].sub_frames.len() < 2 {
             Some(self.current_frame)
         } else {
             None
@@ -189,8 +185,7 @@ impl BowlingGame {
     }
 
     fn handle_active_strikes(&mut self, pins: u16) {
-        let strikeindexes = self.get_strike_frames();
-        for index in strikeindexes {
+        for index in self.get_strike_frames() {
             self.strike_frames[index as usize].next_rolls.push(pins);
             println!("pushed pins {} to next roll of strike {}", pins, index);
             let frame_index = self.strike_frames[index as usize].frame_index;
