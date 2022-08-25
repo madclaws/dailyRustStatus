@@ -126,7 +126,7 @@ impl BowlingGame {
         }
     }
 
-    /// Returns the frame and subframe for the points to be added
+    /// Returns the frame and subframe for the points to be added, change for femo downtime
     fn get_valid_frame(&self, _pins: u16) -> Option<u16> {
         if self.current_frame < 9 {
             // println!("subframes of current frame {} are {}", self.current_frame, self.frames[self.current_frame as usize].sub_frames.len());
