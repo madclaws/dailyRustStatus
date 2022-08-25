@@ -102,7 +102,7 @@ impl BowlingGame {
                     }
                     self.handle_active_strikes(pins);
                     // strike on first sub_frame
-                    if pins == 10 {
+                    if pins == 10 && self.current_frame < 9 {
                         self.strike_frames
                             .push(StrikeFrame::new(self.current_frame))
                     }
@@ -112,7 +112,7 @@ impl BowlingGame {
             }
             if self.current_frame == 9
                 && self.frames[current_frame as usize].sub_frames.len() == 2
-                && !self.is_spare(9)
+                && self.get_subframes_sum(9) < 10
             {
                 self.is_game_completed = true;
             } else if self.current_frame == 9
@@ -142,7 +142,7 @@ impl BowlingGame {
                 Some(self.current_frame + 1)
             }
         } else if self.frames[self.current_frame as usize].sub_frames.len() == 2
-            && self.is_spare(self.current_frame)
+            && self.get_subframes_sum(self.current_frame) >= 10
         {
             Some(self.current_frame)
         } else if self.frames[self.current_frame as usize].sub_frames.len() < 2 {
@@ -156,11 +156,11 @@ impl BowlingGame {
         if self.current_frame < 9 {
             pins <= (10 - self.get_subframes_sum(self.current_frame))
         } else if self.frames[self.current_frame as usize].sub_frames.len() <= 2
-            && !self.is_spare(self.current_frame)
+            && self.get_subframes_sum(self.current_frame) >= 10
         {
-            pins <= (10 - self.get_subframes_sum(self.current_frame))
-        } else {
             pins <= 10
+        } else {
+            pins <= (10 - self.get_subframes_sum(self.current_frame))
         }
     }
 
