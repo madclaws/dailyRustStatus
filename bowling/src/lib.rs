@@ -92,7 +92,8 @@ impl BowlingGame {
                     && self.frames[current_frame as usize].sub_frames.len() >= 2
                 {
                     self.frames[current_frame as usize].total =
-                        self.get_subframes_sum(current_frame)
+                        self.get_subframes_sum(current_frame);
+                    self.handle_active_strikes(pins);
                 } else {
                     // if sub_frame is 0, then check if previous frame is spare, if yes, then add current pin
                     // to its total score.
