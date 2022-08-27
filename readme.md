@@ -152,3 +152,4 @@ Writing Rust daily for building reliable and efficient software #FEMO.
 146. [Fibonacci](https://github.com/madclaws/dailyRustStatus/tree/master/fibonacci)
 147. [Crypto Square - I](https://github.com/madclaws/dailyRustStatus/tree/master/crypto-square)
 148. [Crypto Square - II](https://github.com/madclaws/dailyRustStatus/tree/master/crypto-square)
+149. [Bowling](https://github.com/madclaws/dailyRustStatus/tree/master/bowling)

@@ -26,6 +26,12 @@ impl Frame {
     }
 }
 
+impl Default for Frame {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 #[derive(Clone)]
 pub struct StrikeFrame {
     frame_index: u16,
@@ -43,6 +49,11 @@ impl StrikeFrame {
     }
 }
 
+impl Default for BowlingGame {
+    fn default() -> Self {
+        Self::new()
+    }
+}
 impl BowlingGame {
     pub fn new() -> Self {
         BowlingGame {
@@ -56,11 +67,9 @@ impl BowlingGame {
     pub fn score(&self) -> Option<u16> {
         if self.is_game_completed {
             let mut total_score: u16 = 0;
-            let mut frame_no: u16 = 0;
-            for frame in &self.frames {
+            for (frame_no, frame) in self.frames.iter().enumerate() {
                 total_score += frame.total;
                 println!("Frame no:{} => {}", frame_no, frame.total);
-                frame_no += 1;
             }
             Some(total_score)
         } else {
@@ -121,9 +130,9 @@ impl BowlingGame {
             {
                 self.is_game_completed = true;
             }
-            return Ok(());
+            Ok(())
         } else {
-            return Err(Error::GameComplete);
+            Err(Error::GameComplete)
         }
     }
 
@@ -156,6 +165,11 @@ impl BowlingGame {
     fn is_pin_valid(&self, pins: u16) -> bool {
         if self.current_frame < 9 {
             pins <= (10 - self.get_subframes_sum(self.current_frame))
+        } else if self.is_strike(self.current_frame)
+            && self.get_subframes_len(9) == 2
+            && self.frames[self.current_frame as usize].sub_frames[1] < 10
+        {
+            pins <= (10 - self.frames[self.current_frame as usize].sub_frames[1])
         } else if self.frames[self.current_frame as usize].sub_frames.len() <= 2
             && self.get_subframes_sum(self.current_frame) >= 10
         {
@@ -165,17 +179,27 @@ impl BowlingGame {
         }
     }
 
+    fn get_subframes_len(&self, frame_index: u16) -> u16 {
+        self.frames[frame_index as usize].sub_frames.len() as u16
+    }
+
+    fn is_strike(&self, frame_index: u16) -> bool {
+        self.frames[frame_index as usize].sub_frames.len() >= 1
+            && self.frames[frame_index as usize].sub_frames[0] == 10
+    }
+
     fn is_spare(&self, frame_index: u16) -> bool {
         self.get_subframes_sum(frame_index) == 10
             && self.frames[frame_index as usize].sub_frames.len() == 2
     }
 
-    fn get_strike_frames(&self) -> Vec<u16> {
+    fn get_strike_frames(&self) -> Vec<usize> {
         self.strike_frames
-            .iter()
-            .filter(|&frame| frame.active)
-            .map(|strikeframe| strikeframe.frame_index)
-            .collect::<Vec<u16>>()
+        .iter()
+        .enumerate()
+        .filter(|(_i, frame)| frame.active)
+        .map(|(i, _strikeframe)| i)
+        .collect::<Vec<usize>>()
     }
 
     fn get_subframes_sum(&self, frame_index: u16) -> u16 {
@@ -187,17 +211,17 @@ impl BowlingGame {
 
     fn handle_active_strikes(&mut self, pins: u16) {
         for index in self.get_strike_frames() {
-            self.strike_frames[index as usize].next_rolls.push(pins);
-            println!("pushed pins {} to next roll of strike {}", pins, index);
-            let frame_index = self.strike_frames[index as usize].frame_index;
+            self.strike_frames[index].next_rolls.push(pins);
+            let frame_index = self.strike_frames[index].frame_index;
+            println!("pushed pins {} to next roll of strike {}", pins, frame_index);
             // println!("current frame index {} , next roll pins {}", self.current_frame, pins);
-            if self.strike_frames[index as usize].next_rolls.len() == 2 {
-                self.strike_frames[index as usize].active = false;
-                self.frames[frame_index as usize].total = self.strike_frames[index as usize]
+            if self.strike_frames[index].next_rolls.len() == 2 {
+                self.strike_frames[index].active = false;
+                self.frames[frame_index as usize].total = self.strike_frames[index]
                     .next_rolls
                     .iter()
                     .sum::<u16>()
-                    + self.get_subframes_sum(index as u16);
+                    + 10;
             }
         }
     }
