@@ -6,6 +6,10 @@ pub struct SimpleLinkedList<T> {
     dummy: ::std::marker::PhantomData<T>,
 }
 
+pub struct Node<T> {
+    data: T,
+    next: Option<Box<Node<T>>>  
+}
 impl<T> SimpleLinkedList<T> {
     pub fn new() -> Self {
         unimplemented!()
