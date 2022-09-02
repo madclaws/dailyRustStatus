@@ -1,9 +1,7 @@
 use std::iter::FromIterator;
 
 pub struct SimpleLinkedList<T> {
-    // Delete this field
-    // dummy is needed to avoid unused parameter error during compilation
-    dummy: ::std::marker::PhantomData<T>,
+    head: Option<Box<Node<T>>>
 }
 
 pub struct Node<T> {
@@ -12,7 +10,8 @@ pub struct Node<T> {
 }
 impl<T> SimpleLinkedList<T> {
     pub fn new() -> Self {
-        unimplemented!()
+        // unimplemented!()
+        SimpleLinkedList{head: None}
     }
 
     // You may be wondering why it's necessary to have is_empty()
