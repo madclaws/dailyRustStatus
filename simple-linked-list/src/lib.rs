@@ -24,7 +24,13 @@ impl<T> SimpleLinkedList<T> {
     }
 
     pub fn len(&self) -> usize {
-        unimplemented!()
+        let mut size = 0;
+        loop {
+            if self.head.is_none() {
+                break;
+            }
+        }
+        size
     }
 
     pub fn push(&mut self, _element: T) {
