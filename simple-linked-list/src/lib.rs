@@ -8,6 +8,11 @@ pub struct Node<T> {
     data: T,
     next: Option<Box<Node<T>>>  
 }
+impl <T> Node<T> {
+    pub fn new(element: T) -> Self {
+        Node{data: element, next: None}
+    }
+}
 impl<T> SimpleLinkedList<T> {
     pub fn new() -> Self {
         // unimplemented!()
@@ -20,20 +25,19 @@ impl<T> SimpleLinkedList<T> {
     // whereas is_empty() is almost always cheap.
     // (Also ask yourself whether len() is expensive for SimpleLinkedList)
     pub fn is_empty(&self) -> bool {
-        unimplemented!()
+        self.head.is_none()
     }
 
     pub fn len(&self) -> usize {
-        let mut size = 0;
-        loop {
-            if self.head.is_none() {
-                break;
-            }
+        if self.head.is_none() {
+            return 0
         }
-        size
+        return 0
     }
 
-    pub fn push(&mut self, _element: T) {
+    pub fn push(&mut self, element: T) {
+        let new_data = Node::new(element);
+
         unimplemented!()
     }
 
