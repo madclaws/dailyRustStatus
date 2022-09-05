@@ -1,12 +1,14 @@
 use std::iter::FromIterator;
 
+#[derive(Debug)]
 pub struct SimpleLinkedList<T> {
     head: Option<Box<Node<T>>>
 }
 
+#[derive(Debug)]
 pub struct Node<T> {
-    data: T,
-    next: Option<Box<Node<T>>>  
+    pub data: T,
+    pub next: Option<Box<Node<T>>>  
 }
 impl <T> Node<T> {
     pub fn new(element: T) -> Self {
@@ -36,9 +38,11 @@ impl<T> SimpleLinkedList<T> {
     }
 
     pub fn push(&mut self, element: T) {
-        let new_data = Node::new(element);
-
-        unimplemented!()
+        let new_data = Box::new(Node::new(element));
+        if self.head.is_none() {
+            self.head = Some(new_data)
+        } else {
+        }
     }
 
     pub fn pop(&mut self) -> Option<T> {
