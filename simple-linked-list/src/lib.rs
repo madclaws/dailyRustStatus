@@ -38,10 +38,11 @@ impl<T> SimpleLinkedList<T> {
     }
 
     pub fn push(&mut self, element: T) {
-        let new_data = Box::new(Node::new(element));
-        if self.head.is_none() {
-            self.head = Some(new_data)
+        if let Some(ref mut node) = self.head {
+            node.data = element
         } else {
+            let new_data = Box::new(Node::new(element));
+            self.head = Some(new_data);
         }
     }
 
