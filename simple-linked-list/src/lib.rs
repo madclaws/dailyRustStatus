@@ -2,23 +2,31 @@ use std::iter::FromIterator;
 
 #[derive(Debug)]
 pub struct SimpleLinkedList<T> {
-    head: Option<Box<Node<T>>>
+    head: Option<Box<Node<T>>>,
 }
 
 #[derive(Debug)]
 pub struct Node<T> {
     pub data: T,
-    pub next: Option<Box<Node<T>>>  
+    pub next: Option<Box<Node<T>>>,
 }
-impl <T> Node<T> {
+impl<T> Node<T> {
     pub fn new(element: T) -> Self {
-        Node{data: element, next: None}
+        Node {
+            data: element,
+            next: None,
+        }
+    }
+}
+impl <T> Default for SimpleLinkedList<T> {
+    fn default() -> Self {
+        Self::new()
     }
 }
 impl<T> SimpleLinkedList<T> {
     pub fn new() -> Self {
         // unimplemented!()
-        SimpleLinkedList{head: None}
+        SimpleLinkedList { head: None }
     }
 
     // You may be wondering why it's necessary to have is_empty()
@@ -31,15 +39,30 @@ impl<T> SimpleLinkedList<T> {
     }
 
     pub fn len(&self) -> usize {
-        if self.head.is_none() {
-            return 0
+        let mut ptr = &self.head;
+        let mut link_len = 0;
+        if ptr.is_none() {
+            link_len
+        } else {
+            loop {
+                if let Some(ref node) = ptr {
+                    link_len += 1;
+                    if node.next.is_none() {
+                        break;
+                    } else {
+                        ptr = &node.next
+                    }
+                }
+            }
+            link_len
         }
-        return 0
     }
 
     pub fn push(&mut self, element: T) {
+        // Creating a mutable reference of the Box
         if let Some(ref mut node) = self.head {
-            node.data = element
+            let new_data = Box::new(Node::new(element));
+            node.next = Some(new_data)
         } else {
             let new_data = Box::new(Node::new(element));
             self.head = Some(new_data);
