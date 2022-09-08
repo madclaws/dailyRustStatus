@@ -14,6 +14,10 @@ fn test_push_increments_length() {
     assert_eq!(list.len(), 1, "list's length must be 1");
     list.push(2);
     assert_eq!(list.len(), 2, "list's length must be 2");
+    list.push(3);
+    assert_eq!(list.len(), 3, "list's length must be 3");
+    list.push(4);
+    assert_eq!(list.len(), 4, "list's length must be 4");
 }
 
 #[test]

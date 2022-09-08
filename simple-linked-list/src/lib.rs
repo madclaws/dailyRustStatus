@@ -18,7 +18,7 @@ impl<T> Node<T> {
         }
     }
 }
-impl <T> Default for SimpleLinkedList<T> {
+impl<T> Default for SimpleLinkedList<T> {
     fn default() -> Self {
         Self::new()
     }
@@ -59,13 +59,21 @@ impl<T> SimpleLinkedList<T> {
     }
 
     pub fn push(&mut self, element: T) {
-        // Creating a mutable reference of the Box
-        if let Some(ref mut node) = self.head {
-            let new_data = Box::new(Node::new(element));
-            node.next = Some(new_data)
-        } else {
-            let new_data = Box::new(Node::new(element));
+        let new_data = Box::new(Node::new(element));
+        if self.head.is_none() {
             self.head = Some(new_data);
+        } else {
+            let mut ptr = &mut self.head;
+            loop {
+                if let Some(ref mut node) = ptr {
+                    if node.next.is_none() {
+                        node.next = Some(new_data);
+                        break;
+                    } else {
+                        ptr = &mut node.next
+                    }
+                }
+            }
         }
     }
 
