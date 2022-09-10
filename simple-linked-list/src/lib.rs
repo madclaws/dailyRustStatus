@@ -81,27 +81,32 @@ impl<T> SimpleLinkedList<T> {
         // Find the element, whose next's is None
         // node->next == None, node = None
         // node->next->next = None, node->next = None
-        if self.head.is_none() {
-            None
-        } else {
-        let mut ptr = &self.head;
-        let mut prev_ptr: &Option<Box<Node<T>>> = &None;
-        loop {
-            if let Some(ref node) = ptr {
-                if node.next.is_none() {
-                    if let Some(ref prev_node) = prev_ptr {
-                        return Some(prev_node.data)
-                    }
-                } else {
-                    prev_ptr = ptr;
-                }
-            }
-        }
-        }
+        // if self.head.is_none() {
+        //     None
+        // } else {
+        // let mut ptr = &self.head;
+        // let mut prev_ptr: &Option<Box<Node<T>>> = &None;
+        // loop {
+        //     if let Some(ref node) = ptr {
+        //         if node.next.is_none() {
+        //             if let Some(ref prev_node) = prev_ptr {
+        //                 return Some(prev_node.data)
+        //             }
+        //         } else {
+        //             prev_ptr = ptr;
+        //         }
+        //     }
+        // }
+        // }
+        None
     }
 
     pub fn peek(&self) -> Option<&T> {
-        unimplemented!()
+        if let Some(ref node) = self.head {
+            Some(&node.data)
+        } else {
+            None
+        }
     }
 
     #[must_use]
