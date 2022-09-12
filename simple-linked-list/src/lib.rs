@@ -18,12 +18,12 @@ impl<T> Node<T> {
         }
     }
 }
-impl<T> Default for SimpleLinkedList<T> {
+impl<T: Copy> Default for SimpleLinkedList<T> {
     fn default() -> Self {
         Self::new()
     }
 }
-impl<T> SimpleLinkedList<T> {
+impl<T: Copy> SimpleLinkedList<T> {
     pub fn new() -> Self {
         // unimplemented!()
         SimpleLinkedList { head: None }
@@ -82,7 +82,41 @@ impl<T> SimpleLinkedList<T> {
         // node->next == None, node = None
         // node->next->next = None, node->next = None
 
-
+        let mut popped_value: Option<T> = None;
+        let mut prev_ptr_count = -1;
+        if self.head.is_none() {
+            return None
+        } else {
+            let mut ptr = &self.head;
+            loop {
+                if let Some(ref node) = ptr {
+                    if node.next.is_none() {
+                        popped_value = Some(node.data);
+                        break;
+                    } else {
+                        prev_ptr_count += 1;
+                        ptr = &node.next;
+                    }
+                } 
+            }
+        }
+        if prev_ptr_count == -1 {
+            self.head = None;
+            return popped_value;
+        } else {
+            let mut ptr = &mut self.head;
+            let mut counter = 0;
+            loop {
+                if let Some(ref node) = ptr {
+                    if counter == prev_ptr_count {
+                        node.next = None; 
+                    } else{
+                        counter += 1;
+                        ptr = &node.next;
+                    }
+                } 
+            }
+        }
         // if self.head.is_none() {
         //     return None
         // } else {
@@ -100,7 +134,6 @@ impl<T> SimpleLinkedList<T> {
         //     }
         // }
         // }
-        None
     }
 
     pub fn peek(&self) -> Option<&T> {
@@ -115,8 +148,6 @@ impl<T> SimpleLinkedList<T> {
     pub fn rev(self) -> SimpleLinkedList<T> {
         let rev_list: SimpleLinkedList<T> = SimpleLinkedList::new();
         let mut ptr = &self.head;
-        let mut rev_ptr = &rev_list;
-        let mut link_len = 0;
         if ptr.is_none() {
             self
         } else {
