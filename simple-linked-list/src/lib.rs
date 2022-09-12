@@ -81,8 +81,10 @@ impl<T> SimpleLinkedList<T> {
         // Find the element, whose next's is None
         // node->next == None, node = None
         // node->next->next = None, node->next = None
+
+
         // if self.head.is_none() {
-        //     None
+        //     return None
         // } else {
         // let mut ptr = &self.head;
         // let mut prev_ptr: &Option<Box<Node<T>>> = &None;
@@ -111,7 +113,24 @@ impl<T> SimpleLinkedList<T> {
 
     #[must_use]
     pub fn rev(self) -> SimpleLinkedList<T> {
-        unimplemented!()
+        let rev_list: SimpleLinkedList<T> = SimpleLinkedList::new();
+        let mut ptr = &self.head;
+        let mut rev_ptr = &rev_list;
+        let mut link_len = 0;
+        if ptr.is_none() {
+            self
+        } else {
+            loop {
+                if let Some(ref node) = ptr {
+                    if node.next.is_none() {
+                        break;
+                    } else {
+                        ptr = &node.next
+                    }
+                }
+            }
+            self
+        }
     }
 }
 
