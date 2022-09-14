@@ -104,12 +104,12 @@ impl<T: Copy> SimpleLinkedList<T> {
             self.head = None;
             return popped_value;
         } else {
-            let mut ptr = &mut self.head;
+            let mut ptr = &self.head;
             let mut counter = 0;
             loop {
                 if let Some(ref node) = ptr {
                     if counter == prev_ptr_count {
-                        node.next = None; 
+                        // node.next = None; 
                     } else{
                         counter += 1;
                         ptr = &node.next;
