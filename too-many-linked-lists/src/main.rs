@@ -1,3 +1,5 @@
+mod first;
+
 fn main() {
-    println!("Hello, world!");
+    println!("Too many linked lists");
 }
