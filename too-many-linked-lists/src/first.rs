@@ -15,6 +15,12 @@ struct Node {
     next: Link
 }
 
+impl Drop for List {
+    fn drop(&mut self) {
+        self.head.drop();
+    }
+}
+
 impl List {
     pub fn new() -> Self {
         List{head: Link::Empty}
