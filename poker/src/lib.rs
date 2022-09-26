@@ -3,5 +3,8 @@
 /// Note the type signature: this function should return _the same_ reference to
 /// the winning hand(s) as were passed in, not reconstructed strings which happen to be equal.
 pub fn winning_hands<'a>(hands: &[&'a str]) -> Vec<&'a str> {
+    if hands.len() == 1 {
+        return hands.to_vec()
+    }
     return hands.to_vec()
 }
